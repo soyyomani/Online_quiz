@@ -1,0 +1,68 @@
+/* Container for the entire result page */
+.result-container {
+    max-width: 800px;
+    margin: 50px auto; /* Added margin to avoid navbar overlap */
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e0e0e0;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .result-container h1 {
+    font-size: 2.6rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  
+  /* Quiz title styling */
+  .result-container h2 {
+    font-size: 2.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  /* Score and feedback styling */
+  .result-container p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 25px;
+    font-weight: 400;
+  }
+  
+  /* Emoji styling */
+  .emoji {
+    font-size: 3.5rem;
+    display: block;
+    margin: 30px auto;
+  }
+  
+  .emoji.happy {
+    color: #4caf50; /* Green for happy */
+  }
+  
+  .emoji.neutral {
+    color: #ff9800; /* Orange for neutral */
+  }
+  
+  .emoji.sad {
+    color: #f44336; /* Red for sad */
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #f44336;
+    background-color: #ffebee;
+    border: 1px solid #f44336;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+    font-weight: 500;
+  }
+  

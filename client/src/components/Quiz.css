@@ -1,0 +1,81 @@
+/* Container for the entire quiz component */
+.quiz {
+    max-width: 800px;
+    margin: 50px auto; /* Added margin to avoid overlapping with the navbar */
+    padding: 30px; /* Increased padding for more space around content */
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e0e0e0; /* Slight border for better distinction */
+  }
+  
+  /* Title styling */
+  .quiz h1 {
+    font-size: 2.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  
+  /* Styling for each question */
+  .question {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  /* Styling for each option */
+  .option {
+    margin-bottom: 15px;
+  }
+  
+  .option label {
+    display: block;
+    font-size: 1.1rem;
+    color: #444;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .option input[type="radio"] {
+    margin-right: 12px;
+  }
+  
+  .option label:hover {
+    background-color: #e0e0e0;
+    color: #222;
+  }
+  
+  /* Styling for the submit button */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  

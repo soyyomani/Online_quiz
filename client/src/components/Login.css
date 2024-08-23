@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login {
+  background-color: #fff;
+  padding: 6rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.75rem;
+  color: #333;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.login button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login button:hover {
+  background-color: #0056b3;
+}
+
+.login p {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.login p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login p a:hover {
+  text-decoration: underline;
+}

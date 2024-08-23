@@ -1,0 +1,86 @@
+/* Student Dashboard Styles */
+.student-dashboard {
+    font-family: 'Arial', sans-serif; /* Consistent font for the dashboard */
+    background-color: #f8f9fa; /* Light background for the whole page */
+    padding: 3rem 2rem; /* Increase padding to ensure spacing from the navbar */
+    max-width: 1200px; /* Maximum width for the dashboard */
+    margin: 0 auto;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff; /* White background for the profile section */
+    padding: 2rem; /* Increase padding inside the profile section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .profile-pic {
+    width: 120px; /* Slightly larger profile picture */
+    height: 120px;
+    border-radius: 50%; /* Circular profile picture */
+    object-fit: cover; /* Ensure the image covers the circle */
+  }
+  
+  .profile-section h2 {
+    margin: 0;
+    color: #333; /* Dark text color */
+    font-size: 1.8rem; /* Larger font size for the welcome message */
+  }
+  
+  .profile-section p {
+    color: #6c757d; /* Lighter text color for additional information */
+    font-size: 1rem;
+  }
+  
+  .overview-section {
+    background-color: #fff; /* White background for the overview section */
+    padding: 1.5rem; /* Increase padding inside the overview section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .overview-section h2 {
+    margin-bottom: 1rem;
+    color: #333; /* Dark text color */
+    font-size: 1.5rem; /* Font size for the section heading */
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .stat {
+    background-color: #007bff; /* Primary color for the stat boxes */
+    color: #fff;
+    padding: 1.5rem; /* Increased padding for better spacing */
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px; /* Minimum width for the stat boxes */
+  }
+  
+  .stat h3 {
+    margin: 0;
+    font-size: 2rem; /* Larger font size for the numbers */
+  }
+  
+  .stat p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem; /* Smaller font size for the labels */
+  }
+  
+  .quiz-list {
+    background-color: #fff; /* White background for the quiz list section */
+    padding: 1.5rem; /* Increase padding inside the quiz list section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

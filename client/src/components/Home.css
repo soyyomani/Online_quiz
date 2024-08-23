@@ -1,0 +1,129 @@
+/* Home Page Styles */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 60px;  
+}
+
+ 
+ 
+
+.hero-section {
+    width: 100vw;
+    height: 50vh; 
+    background-size: cover; /* Cover the entire section */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating of the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    padding: 0.75rem 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+.hero-buttons .btn-secondary {
+    background-color: #6c757d;
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Features Section with Transition Effect */
+.features-section {
+    padding: 3rem 1rem;
+    background-color: #f8f8fa;
+    animation: colorTransition 1.5s infinite alternate;
+}
+.features-section h2{
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    
+}
+
+@keyframes colorTransition {
+    0% { background-color: #f8f9fa; }
+    50% { background-color: #e9ecef; }
+    100% { background-color: #f8f9fa; }
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+ 
+
+.feature-item {
+    width: 30%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* About Section */
+.about-section {
+    padding: 3rem 1rem;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.25rem;
+    color: #6c757d;
+}

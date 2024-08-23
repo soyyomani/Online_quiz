@@ -1,0 +1,46 @@
+/* AdminDashboard.css */
+
+.admin-dashboard {
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 80px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-overview {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .overview-item {
+    background: #ad0404;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 30px);
+    text-align: center;
+  }
+  
+  .create-quiz-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 25px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .create-quiz-btn:hover {
+    background-color: #2980b9;
+  }
+  

@@ -1,0 +1,27 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* App container ensures full-screen alignment */
+.app-container {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+/* Main content should take the remaining space between navbar and footer */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer is positioned at the bottom */
+footer {
+  margin-top: auto;
+}
