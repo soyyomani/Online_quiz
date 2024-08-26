@@ -26,7 +26,7 @@ const Login = () => {
       };
   
       const body = JSON.stringify({ email, password });
-      const res = await axios.post('http://localhost:4020/api/auth/login', body, config);
+      const res = await axios.post('https://online-quiz-backend-tp6d.onrender.com/api/auth/login', body, config);
   
       console.log('Login successful:', res.data);
       const { token, user } = res.data;
