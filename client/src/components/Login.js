@@ -33,7 +33,7 @@ const Login = () => {
   
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
-      navigate(user.role === 'admin' ? '/admin/dashboard' : '/student/dashboard');
+      navigate(user.role === 'admin' ? 'https://online-quiz-backend-tp6d.onrender.com/admin/dashboard' : 'https://online-quiz-backend-tp6d.onrender.com/student/dashboard');
        
     } catch (err) {
       console.error('Error during login:', err.response.data);
@@ -54,7 +54,7 @@ const Login = () => {
         <button type="submit">Login</button>
       </form>
       <p>Don't have an account? 
-        <button type="button" onClick={() => navigate('/register')} className="link-button">
+        <button type="button" onClick={() => navigate('https://online-quiz-backend-tp6d.onrender.com/register')} className="link-button">
           Sign up
         </button>
       </p>
