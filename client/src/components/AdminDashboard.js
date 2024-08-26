@@ -57,7 +57,7 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      <Link to="/admin/quiz/new" className="create-quiz-btn">
+      <Link to="https://online-quiz-backend-tp6d.onrender.com/admin/quiz/new" className="create-quiz-btn">
         Create New Quiz
       </Link>
     </div>
