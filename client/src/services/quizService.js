@@ -26,18 +26,20 @@ const getQuizzes = async () => {
       }
     };
     const res = await axios.get('http://localhost:4020/api/quiz', config);
+    if (!res.data) {
+      throw new Error('No data returned from server');
+    }
     const quizzes = res.data;
-
-    // Filter completed and upcoming quizzes
     const completedQuizzes = quizzes.filter(quiz => quiz.results);
     const upcomingQuizzes = quizzes.filter(quiz => !quiz.results);
 
     return { completedQuizzes, upcomingQuizzes };
   } catch (error) {
-    console.error('Error fetching quizzes:', error);
+    console.error('Error fetching quizzes:', error.message || error);
     throw error;
   }
 };
+
 
 
 const getQuiz = async quizId => {

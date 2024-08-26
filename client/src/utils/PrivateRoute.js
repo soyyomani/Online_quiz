@@ -10,7 +10,7 @@ const PrivateRoute = ({ role }) => {
   }
 
   if (role && user.role !== role) {
-    return <Navigate to="/" />;
+    return <Navigate to={user.role === 'admin' ? '/admin/dashboard' : '/student/dashboard'} />;
   }
 
   return <Outlet />;

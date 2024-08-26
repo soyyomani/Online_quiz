@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import {jwtDecode} from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';  
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
+  const [redirectPath, setRedirectPath] = useState(null);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -25,12 +26,20 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (redirectPath) {
+      window.location.href = redirectPath;
+      setRedirectPath(null);  
+    }
+  }, [redirectPath]);
+
   const loginUser = (userToken) => {
     try {
       const decodedUser = jwtDecode(userToken);
       setIsLoggedIn(true);
       setUser(decodedUser.user);
       localStorage.setItem('token', userToken);
+      setRedirectPath(decodedUser.user.role === 'admin' ? '/admin/dashboard' : '/student/dashboard');
     } catch (error) {
       console.error("Invalid token during login:", error);
       setIsLoggedIn(false);
@@ -42,6 +51,7 @@ export const AuthProvider = ({ children }) => {
     setIsLoggedIn(false);
     setUser(null);
     localStorage.removeItem('token');
+    setRedirectPath('/login');  
   };
 
   return (
@@ -51,5 +61,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export default AuthProvider;  // Default export
 export const useAuth = () => useContext(AuthContext);
+export default AuthProvider;

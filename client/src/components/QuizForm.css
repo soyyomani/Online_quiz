@@ -12,6 +12,9 @@
     margin-bottom: 20px;
     color: #333;
     font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
   }
   
   .form-group {
@@ -22,6 +25,7 @@
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
+  
   }
   
   input[type="text"],

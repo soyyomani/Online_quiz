@@ -57,7 +57,7 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      <Link to="/admin/create-quiz" className="create-quiz-btn">
+      <Link to="/admin/quiz/new" className="create-quiz-btn">
         Create New Quiz
       </Link>
     </div>

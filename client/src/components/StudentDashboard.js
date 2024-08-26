@@ -23,6 +23,7 @@ const StudentDashboard = () => {
     const fetchUserDetails = async () => {
       try {
         const userData = await authService.fetchUserDetails();  
+        console.log('User Data:', userData);  
         setUsername(userData.username);  
       } catch (err) {
         console.error('Error fetching user details:', err.message);
@@ -42,7 +43,7 @@ const StudentDashboard = () => {
     <div className="student-dashboard">
       <div className="profile-section">
         <img src="profile-pic-url" alt="Student" className="profile-pic" />
-        <h2>Welcome,{username}!</h2> 
+        <h2>Welcome, {username}!</h2> {/* Added space after comma */}
         <p>Your progress is looking great. Keep it up!</p>
       </div>
 

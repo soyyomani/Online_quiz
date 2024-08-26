@@ -17,29 +17,30 @@ const Login = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-
+  
     try {
       const config = {
         headers: {
           'Content-Type': 'application/json'
         }
       };
-
+  
       const body = JSON.stringify({ email, password });
       const res = await axios.post('http://localhost:4020/api/auth/login', body, config);
-
+  
       console.log('Login successful:', res.data);
       const { token, user } = res.data;
-
+  
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
-
       navigate(user.role === 'admin' ? '/admin/dashboard' : '/student/dashboard');
+       
     } catch (err) {
       console.error('Error during login:', err.response.data);
     }
   };
-
+  
+   
   return (
     <div className="login">
       <h1>Login</h1>
