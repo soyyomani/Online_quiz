@@ -18,13 +18,13 @@ const AdminDashboard = () => {
           }
         };
 
-        const quizRes = await axios.get('http://localhost:4020/api/quiz', config);
+        const quizRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz', config);
         setQuizzes(quizRes.data);
 
-        const analyticsRes = await axios.get('http://localhost:4020/api/quiz/analytics', config);
+        const analyticsRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz/analytics', config);
         setAnalytics(analyticsRes.data);
 
-        const commentsRes = await axios.get('http://localhost:4020/api/quiz/comments', config);
+        const commentsRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz/comments', config);
         setRecentComments(commentsRes.data);
       } catch (err) {
         console.error(err.response.data);
