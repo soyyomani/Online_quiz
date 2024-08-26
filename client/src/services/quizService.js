@@ -9,7 +9,7 @@ const createQuiz = async quizData => {
       }
     };
 
-    const res = await axios.post('http://localhost:4020/api/quiz', quizData, config);
+    const res = await axios.post('https://online-quiz-backend-tp6d.onrender.com/api/quiz', quizData, config);
     return res.data;
   } catch (error) {
     console.error('Error creating quiz:', error);
@@ -25,7 +25,7 @@ const getQuizzes = async () => {
         'x-auth-token': token
       }
     };
-    const res = await axios.get('http://localhost:4020/api/quiz', config);
+    const res = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz', config);
     if (!res.data) {
       throw new Error('No data returned from server');
     }
@@ -44,7 +44,7 @@ const getQuizzes = async () => {
 
 const getQuiz = async quizId => {
   try {
-    const res = await axios.get(`http://localhost:4020/api/quiz/${quizId}`);
+    const res = await axios.get(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/${quizId}`);
     return res.data;
   } catch (error) {
     console.error(`Error fetching quiz ${quizId}:`, error);
@@ -62,7 +62,7 @@ const submitQuiz = async (quizId, answers) => {
       }
     };
 
-    const res = await axios.post(`http://localhost:4020/api/quiz/${quizId}/submit`, answers, config);
+    const res = await axios.post(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/${quizId}/submit`, answers, config);
     return res.data;
   } catch (error) {
     console.error(`Error submitting quiz ${quizId}:`, error);
@@ -83,7 +83,7 @@ const fetchResult = async id => {
       }
     };
 
-    const res = await axios.get(`http://localhost:4020/api/quiz/${id}/result`, config);
+    const res = await axios.get(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/${id}/result`, config);
     return res.data;
   } catch (error) {
     console.error(`Error fetching result for quiz ${id}:`, error.response || error.message || error);
