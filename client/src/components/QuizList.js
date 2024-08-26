@@ -18,7 +18,7 @@ const QuizList = () => {
           },
         };
 
-        const res = await axios.get('http://localhost:4020/api/quiz', config);
+        const res = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz', config);
         if (res.data && Array.isArray(res.data)) {
           const completed = res.data.filter((quiz) => quiz.completed);
           const available = res.data.filter((quiz) => !quiz.completed);
@@ -44,7 +44,7 @@ const QuizList = () => {
       };
 
       // Assuming you have an endpoint to mark a quiz as completed
-      const res = await axios.put(`http://localhost:4020/api/quiz/${quizId}/complete`, {}, config);
+      const res = await axios.put(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/${quizId}/complete`, {}, config);
 
       if (res.data) {
         setAvailableQuizzes((prev) => prev.filter((quiz) => quiz._id !== quizId));
