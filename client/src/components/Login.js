@@ -54,7 +54,7 @@ const Login = () => {
         <button type="submit">Login</button>
       </form>
       <p>Don't have an account? 
-        <button type="button" onClick={() => navigate('https://online-quiz-backend-tp6d.onrender.com/register')} className="link-button">
+        <button type="button" onClick={() => navigate('https://online-quiz-app-1tzo.onrender.com/register')} className="link-button">
           Sign up
         </button>
       </p>
