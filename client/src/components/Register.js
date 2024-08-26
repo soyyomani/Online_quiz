@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // Import Link from react-router-dom
 import axios from 'axios';
 import './Register.css';
 
@@ -94,7 +94,7 @@ const Register = () => {
           </select>
           <button type="submit">Register</button>
           <div className="text">
-            <a href="/login">Already have an account? Login</a>
+            <Link to="/login">Already have an account? Login</Link> {/* Use Link instead of a */}
           </div>
         </form>
       </div>
