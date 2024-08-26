@@ -32,7 +32,7 @@ const fetchUserDetails = async () => {
         'x-auth-token': token
       }
     };
-    const res = await axios.get('http://localhost:4020/api/auth/user', config);
+    const res = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/auth/user', config);
     return res.data; // Return the user data
   } catch (err) {
     throw new Error('Error fetching user details: ' + (err.response ? err.response.data : err.message));
