@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import "./Login.css";
+import './Login.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -17,30 +17,31 @@ const Login = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-  
+
     try {
       const config = {
         headers: {
           'Content-Type': 'application/json'
         }
       };
-  
+
       const body = JSON.stringify({ email, password });
       const res = await axios.post('https://online-quiz-backend-tp6d.onrender.com/api/auth/login', body, config);
-  
+
       console.log('Login successful:', res.data);
       const { token, user } = res.data;
-  
+
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
-      navigate(user.role === 'admin' ? 'https://online-quiz-backend-tp6d.onrender.com/admin/dashboard' : 'https://online-quiz-backend-tp6d.onrender.com/student/dashboard');
-       
+
+      // Redirect to the correct dashboard based on role
+      navigate(user.role === 'admin' ? '/admin/dashboard' : '/student/dashboard');
+      
     } catch (err) {
-      console.error('Error during login:', err.response.data);
+      console.error('Error during login:', err.response?.data || err.message);
     }
   };
-  
-   
+
   return (
     <div className="login">
       <h1>Login</h1>
