@@ -33,7 +33,7 @@ const Register = () => {
       return;
     }
     try {
-      const res = await axios.post('http://localhost:4020/api/auth/register', formData);
+      const res = await axios.post('https://online-quiz-backend-tp6d.onrender.com/api/auth/register', formData);
       console.log(res.data);
       navigate('/login');
     } catch (err) {
