@@ -19,7 +19,7 @@ const Quiz = () => {
           }
         };
 
-        const res = await axios.get(`http://localhost:4020/api/quiz/${id}`, config);
+        const res = await axios.get(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/${id}`, config);
         setQuiz(res.data);
         setAnswers(new Array(res.data.questions.length).fill(''));
       } catch (err) {
@@ -54,7 +54,7 @@ const Quiz = () => {
         }))
       };
 
-      const res = await axios.post(`http://localhost:4020/api/quiz/${id}/submit`, submissionData, config);
+      const res = await axios.post(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/${id}/submit`, submissionData, config);
       console.log(res.data);
       navigate(`/student/quiz/${id}/result`);
     } catch (err) {
