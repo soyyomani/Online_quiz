@@ -29,11 +29,11 @@ const Home = () => {
 
     const getDashboardLink = () => {
         if (user?.role === 'admin') {
-            return 'https://online-quiz-backend-tp6d.onrender.com/admin/dashboard';
+            return '/admin/dashboard';
         } else if (user?.role === 'student') {
-            return 'https://online-quiz-backend-tp6d.onrender.com/student/dashboard';
+            return '/student/dashboard';
         }
-        return 'https://online-quiz-backend-tp6d.onrender.com/login';
+        return '/login';
     };
 
     return (
