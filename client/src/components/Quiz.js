@@ -19,7 +19,7 @@ const Quiz = () => {
           }
         };
 
-        const res = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz/${id}`, config);
+        const res = await axios.get(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/${id}`, config);
         setQuiz(res.data);
         setAnswers(new Array(res.data.questions.length).fill(''));
       } catch (err) {
