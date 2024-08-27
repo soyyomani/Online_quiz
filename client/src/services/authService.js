@@ -8,7 +8,7 @@ const register = async userData => {
   };
 
   const body = JSON.stringify(userData);
-  const res = await axios.post('/api/auth/register', body, config);
+  const res = await axios.post('https://online-quiz-backend-tp6d.onrender.com/api/auth/register', body, config);
   return res.data;
 };
 
@@ -20,7 +20,7 @@ const login = async userData => {
   };
 
   const body = JSON.stringify(userData);
-  const res = await axios.post('/api/auth/login', body, config);
+  const res = await axios.post('https://online-quiz-backend-tp6d.onrender.com/api/auth/login', body, config);
   return res.data;
 };
 
