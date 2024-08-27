@@ -18,13 +18,13 @@ const AdminDashboard = () => {
           }
         };
 
-        const quizRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz', config);
+        const quizRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz/api/quiz', config);
         setQuizzes(quizRes.data);
 
-        const analyticsRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz/analytics', config);
+        const analyticsRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz/api/quiz/analytics', config);
         setAnalytics(analyticsRes.data);
 
-        const commentsRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz/comments', config);
+        const commentsRes = await axios.get('https://online-quiz-backend-tp6d.onrender.com/api/quiz/api/quiz/comments', config);
         setRecentComments(commentsRes.data);
       } catch (err) {
         console.error(err.response.data);
@@ -57,7 +57,7 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      <Link to="https://online-quiz-backend-tp6d.onrender.com/admin/quiz/new" className="create-quiz-btn">
+      <Link to="/admin/quiz/new" className="create-quiz-btn">
         Create New Quiz
       </Link>
     </div>
