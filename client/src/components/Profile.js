@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get(`https://online-quiz-backend-tp6d.onrender.com/api/profile/${userId}`);
+        const response = await axios.get(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/api/profile/${userId}`);
         setUser(response.data);
         setName(response.data.name);
         setEmail(response.data.email);
@@ -42,7 +42,7 @@ const Profile = () => {
     }
 
     try {
-      const response = await axios.put(`https://online-quiz-backend-tp6d.onrender.com/api/profile/${userId}`, formData, {
+      const response = await axios.put(`https://online-quiz-backend-tp6d.onrender.com/api/quiz/api/profile/${userId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
